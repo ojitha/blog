@@ -14,10 +14,13 @@ def sum(a:Int, b:Int):Int = a + b                //> sum: (a: Int, b: Int)Int
   val a = sum _                                   //> a  : (Int, Int) => Int = ex3$$$Lambda$9/1209271652@58ceff1
   a.apply(1,2)                                    //> res1: Int = 3
 ```
-In the second line, you don't need to give parameters.
+In the second line, you don't need to give parameters. The underscore can be given to replace one or more parameters:
+```scala
+
+```
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODg3NjAyMjQsODI5NjAxNTgxLC0xMT
-I5NTk4NDY1XX0=
+eyJoaXN0b3J5IjpbLTM3MTc1MDAwNCwtMTk4ODc2MDIyNCw4Mj
+k2MDE1ODEsLTExMjk1OTg0NjVdfQ==
 -->
