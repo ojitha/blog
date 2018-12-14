@@ -5,10 +5,11 @@ Local functions are the functions defined inside other functions. Therefore , lo
 ## First-class Functions
 Scala supports first-class functions which can be user defined as well as anonymous literal value, for example
 ```scala
-(x:Int) => x
+(x:Int) => x + 1
 ```
+parameters and the function body separated by the "=>". 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzOTUzOTY1XX0=
+eyJoaXN0b3J5IjpbOTE4ODgwOTYzXX0=
 -->
