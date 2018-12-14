@@ -27,10 +27,10 @@ val a = 10
 val f3 = (x:Int, y:Int) => (x+y) + a  
 f3(1,2)
 ```
-A function literal with no free variables, is called a **closed term** otherwise called **open term**.
+A function literal with no free variables, is called a **closed term** otherwise called **open term**. Th function value created at runtime from a function literal is called a **closure**.
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3NzM1NjczMCwyODIzMDY3MzMsMTMxMj
+eyJoaXN0b3J5IjpbLTg1MjM4NTE3OSwyODIzMDY3MzMsMTMxMj
 I4ODU3NywxOTk3MDk0NjQzLC0zNzE3NTAwMDQsLTE5ODg3NjAy
 MjQsODI5NjAxNTgxLC0xMTI5NTk4NDY1XX0=
 -->
