@@ -31,10 +31,12 @@ A function literal with no free variables, is called a **closed term** otherwise
 
 ## Higher-order functions
 Functions that takes function as parameters are called higher-order functions. The great benefit of higer-order functions is they enable you to create **control abstractions**. Other benefit that you can put the higher-order functions in an API itself.
+
+
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2Njg3MjQ2MywtNzgzNjk4NTgzLDI4Mj
-MwNjczMywxMzEyMjg4NTc3LDE5OTcwOTQ2NDMsLTM3MTc1MDAw
-NCwtMTk4ODc2MDIyNCw4Mjk2MDE1ODEsLTExMjk1OTg0NjVdfQ
-==
+eyJoaXN0b3J5IjpbMTQwOTgzNzI5MSwxOTY2ODcyNDYzLC03OD
+M2OTg1ODMsMjgyMzA2NzMzLDEzMTIyODg1NzcsMTk5NzA5NDY0
+MywtMzcxNzUwMDA0LC0xOTg4NzYwMjI0LDgyOTYwMTU4MSwtMT
+EyOTU5ODQ2NV19
 -->
