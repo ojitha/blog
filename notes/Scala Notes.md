@@ -7,9 +7,9 @@ Scala supports first-class functions which can be user defined as well as anonym
 ```scala
 (x:Int) => x + 1
 ```
-parameters and the function body separated by the "=>". 
+parameters and the function body separated by the "=>". In case if the type can be inference, then no need to define type, this is called **target typing**.
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE4ODgwOTYzXX0=
+eyJoaXN0b3J5IjpbLTExMjk1OTg0NjVdfQ==
 -->
