@@ -27,10 +27,10 @@ val a = 10
 val f3 = (x:Int, y:Int) => (x+y) + a  
 f3(1,2)
 ```
-The function literal with no free varia
+A function literal with no free variables, is called a **closed term**. Function literal with 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4NDU5NTc1MywyODIzMDY3MzMsMTMxMj
-I4ODU3NywxOTk3MDk0NjQzLC0zNzE3NTAwMDQsLTE5ODg3NjAy
-MjQsODI5NjAxNTgxLC0xMTI5NTk4NDY1XX0=
+eyJoaXN0b3J5IjpbOTEyOTIxMzg2LDI4MjMwNjczMywxMzEyMj
+g4NTc3LDE5OTcwOTQ2NDMsLTM3MTc1MDAwNCwtMTk4ODc2MDIy
+NCw4Mjk2MDE1ODEsLTExMjk1OTg0NjVdfQ==
 -->
