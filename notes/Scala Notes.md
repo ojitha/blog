@@ -20,8 +20,11 @@ val f: (Int, Int) => Int =  (_ : Int) + (_ : Int)
 k(1,2)
 ```
 
+## Closures
+
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5NzA5NDY0MywtMzcxNzUwMDA0LC0xOT
-g4NzYwMjI0LDgyOTYwMTU4MSwtMTEyOTU5ODQ2NV19
+eyJoaXN0b3J5IjpbMTMxMjI4ODU3NywxOTk3MDk0NjQzLC0zNz
+E3NTAwMDQsLTE5ODg3NjAyMjQsODI5NjAxNTgxLC0xMTI5NTk4
+NDY1XX0=
 -->
