@@ -8,8 +8,8 @@ Scala supports first-class functions which can be user defined as well as anonym
 (x:Int) => x + 1
 ```
 parameters and the function body separated by the "=>". In case if the type can be inference, then no need to define type, this is called **target typing**.
-In the partially applied function,  
+In the **partially applied function**,  no need to provide all the necessary parameters, but partially.
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExNzI4NDgxMCwtMTEyOTU5ODQ2NV19
+eyJoaXN0b3J5IjpbODI5NjAxNTgxLC0xMTI5NTk4NDY1XX0=
 -->
