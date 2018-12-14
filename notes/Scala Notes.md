@@ -16,11 +16,12 @@ def sum(a:Int, b:Int):Int = a + b                //> sum: (a: Int, b: Int)Int
 ```
 In the second line, you don't need to give parameters. The underscore can be given to replace one or more parameters:
 ```scala
-
+val f: (Int, Int) => Int =  (_ : Int) + (_ : Int)
+k(1,2)
 ```
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3MTc1MDAwNCwtMTk4ODc2MDIyNCw4Mj
-k2MDE1ODEsLTExMjk1OTg0NjVdfQ==
+eyJoaXN0b3J5IjpbMTk5NzA5NDY0MywtMzcxNzUwMDA0LC0xOT
+g4NzYwMjI0LDgyOTYwMTU4MSwtMTEyOTU5ODQ2NV19
 -->
