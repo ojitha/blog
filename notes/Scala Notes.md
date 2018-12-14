@@ -30,10 +30,10 @@ f3(1,2)
 A function literal with no free variables, is called a **closed term** otherwise called **open term**. Th function value created at runtime from a function literal is called a **closure**.
 
 ## Higher-order functions
-Functions that takes function as parameters are called higher-order functions. The great benefit of higer-order functions is they enable you
+Functions that takes function as parameters are called higher-order functions. The great benefit of higer-order functions is they enable you to create **control abstractions**. Other benefits 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5ODgxMDYyMSwtNzgzNjk4NTgzLDI4Mj
+eyJoaXN0b3J5IjpbMTk2Njg1MDY0MCwtNzgzNjk4NTgzLDI4Mj
 MwNjczMywxMzEyMjg4NTc3LDE5OTcwOTQ2NDMsLTM3MTc1MDAw
 NCwtMTk4ODc2MDIyNCw4Mjk2MDE1ODEsLTExMjk1OTg0NjVdfQ
 ==
