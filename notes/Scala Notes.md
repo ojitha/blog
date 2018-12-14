@@ -21,10 +21,15 @@ k(1,2)
 ```
 
 ## Closures
-
+In the following co
+```scala
+val a = 10  
+val f3 = (x:Int, y:Int) => (x+y) + a  
+f3(1,2)
+```
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxMjI4ODU3NywxOTk3MDk0NjQzLC0zNz
-E3NTAwMDQsLTE5ODg3NjAyMjQsODI5NjAxNTgxLC0xMTI5NTk4
-NDY1XX0=
+eyJoaXN0b3J5IjpbMTk0NDY4MjY2LDEzMTIyODg1NzcsMTk5Nz
+A5NDY0MywtMzcxNzUwMDA0LC0xOTg4NzYwMjI0LDgyOTYwMTU4
+MSwtMTEyOTU5ODQ2NV19
 -->
