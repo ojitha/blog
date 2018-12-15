@@ -39,7 +39,7 @@ val s = f(arr: _*)
 s( (x:Seq[Int]) => x.reduceLeft(_ + _) )
 ```
 
-In the line# 2, the return type (derived from the left side of the definition of the `f` is `(Seq[Int] => Int) => Int`, therefore, in line# 4, you have to pass the compatible function which is work on the **repeated parameter** passed in the line# 2. Above `s` has used **currying**. Therefore, If you use **by-name parameters**, then you can create the following control abstraction:
+In the line# 2, the return type (derived from the left side of the definition of the `f` is `(Seq[Int] => Int) => Int`, therefore, in line# 4, you have to pass the compatible function which is work on the **repeated parameter** passed in the line# 2. Above `s` has used **currying**. 
 
 ```scala
 f(arr: _*) {  
@@ -49,9 +49,9 @@ f(arr: _*) {
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTcyMTgwNDQsMzA2NzIyODIxLC0xNz
-A3NDAxMTI3LDE0MDk4MzcyOTEsMTk2Njg3MjQ2MywtNzgzNjk4
-NTgzLDI4MjMwNjczMywxMzEyMjg4NTc3LDE5OTcwOTQ2NDMsLT
-M3MTc1MDAwNCwtMTk4ODc2MDIyNCw4Mjk2MDE1ODEsLTExMjk1
-OTg0NjVdfQ==
+eyJoaXN0b3J5IjpbMTg5MTY3MTE1MSwtMjA5NzIxODA0NCwzMD
+Y3MjI4MjEsLTE3MDc0MDExMjcsMTQwOTgzNzI5MSwxOTY2ODcy
+NDYzLC03ODM2OTg1ODMsMjgyMzA2NzMzLDEzMTIyODg1NzcsMT
+k5NzA5NDY0MywtMzcxNzUwMDA0LC0xOTg4NzYwMjI0LDgyOTYw
+MTU4MSwtMTEyOTU5ODQ2NV19
 -->
