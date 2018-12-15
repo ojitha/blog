@@ -46,13 +46,13 @@ f(arr: _*) {
   (x: Seq[Int]) => x.reduceLeft(_ + _)  
 }
 ```
-
+You can change the right part of the equation in
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDA0NjU0NjgsLTEyODI5NjQwMDIsMT
-g5MTY3MTE1MSwtMjA5NzIxODA0NCwzMDY3MjI4MjEsLTE3MDc0
-MDExMjcsMTQwOTgzNzI5MSwxOTY2ODcyNDYzLC03ODM2OTg1OD
-MsMjgyMzA2NzMzLDEzMTIyODg1NzcsMTk5NzA5NDY0MywtMzcx
-NzUwMDA0LC0xOTg4NzYwMjI0LDgyOTYwMTU4MSwtMTEyOTU5OD
-Q2NV19
+eyJoaXN0b3J5IjpbMTI0OTAzMDY2NCwtMTgwMDQ2NTQ2OCwtMT
+I4Mjk2NDAwMiwxODkxNjcxMTUxLC0yMDk3MjE4MDQ0LDMwNjcy
+MjgyMSwtMTcwNzQwMTEyNywxNDA5ODM3MjkxLDE5NjY4NzI0Nj
+MsLTc4MzY5ODU4MywyODIzMDY3MzMsMTMxMjI4ODU3NywxOTk3
+MDk0NjQzLC0zNzE3NTAwMDQsLTE5ODg3NjAyMjQsODI5NjAxNT
+gxLC0xMTI5NTk4NDY1XX0=
 -->
