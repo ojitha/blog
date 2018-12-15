@@ -50,13 +50,18 @@ You can change the right side of the equation inside the `{...}` in the above.
 
 You can create new **control struactures** as well because you can pass the function to higher-order function.
 
+```scala
+def twice(f: Int => Int):Int => Int = x => f(f(x))
+// for example  
+twice((x:Int) => x *2)(3)
 ```
+
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzE3MjczNzAsLTE5ODU2MTU3ODIsLT
-E4MDA0NjU0NjgsLTEyODI5NjQwMDIsMTg5MTY3MTE1MSwtMjA5
-NzIxODA0NCwzMDY3MjI4MjEsLTE3MDc0MDExMjcsMTQwOTgzNz
-I5MSwxOTY2ODcyNDYzLC03ODM2OTg1ODMsMjgyMzA2NzMzLDEz
-MTIyODg1NzcsMTk5NzA5NDY0MywtMzcxNzUwMDA0LC0xOTg4Nz
-YwMjI0LDgyOTYwMTU4MSwtMTEyOTU5ODQ2NV19
+eyJoaXN0b3J5IjpbMTIyNjQzMTU1LC0xOTg1NjE1NzgyLC0xOD
+AwNDY1NDY4LC0xMjgyOTY0MDAyLDE4OTE2NzExNTEsLTIwOTcy
+MTgwNDQsMzA2NzIyODIxLC0xNzA3NDAxMTI3LDE0MDk4MzcyOT
+EsMTk2Njg3MjQ2MywtNzgzNjk4NTgzLDI4MjMwNjczMywxMzEy
+Mjg4NTc3LDE5OTcwOTQ2NDMsLTM3MTc1MDAwNCwtMTk4ODc2MD
+IyNCw4Mjk2MDE1ODEsLTExMjk1OTg0NjVdfQ==
 -->
