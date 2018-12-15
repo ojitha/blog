@@ -39,10 +39,10 @@ val s = f(arr: _*)
 s( (x:Seq[Int]) => x.reduceLeft(_ + _) )
 ```
 
-In the line# 2, the return type of the `f` is ``
+In the line# 2, the return type of the `f` is `(Seq[Int] => Int) => Int`, therefore, in line 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzUyNTY0MzM3LC0xNzA3NDAxMTI3LDE0MD
+eyJoaXN0b3J5IjpbNTc3NzA5MDkzLC0xNzA3NDAxMTI3LDE0MD
 k4MzcyOTEsMTk2Njg3MjQ2MywtNzgzNjk4NTgzLDI4MjMwNjcz
 MywxMzEyMjg4NTc3LDE5OTcwOTQ2NDMsLTM3MTc1MDAwNCwtMT
 k4ODc2MDIyNCw4Mjk2MDE1ODEsLTExMjk1OTg0NjVdfQ==
