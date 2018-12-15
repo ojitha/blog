@@ -32,11 +32,18 @@ A function literal with no free variables, is called a **closed term** otherwise
 ## Higher-order functions
 Functions that takes function as parameters are called higher-order functions. The great benefit of higer-order functions is they enable you to create **control abstractions**. Other benefit that you can put the higher-order functions in an API itself.
 
+```scala
+val arr = Array(1,2,3,4)  
+def f(x:Int*) = (y:(Int*) => Int) => y(x: _*)  
+val s = f(arr: _*)  
+s( (x:Seq[Int]) => x.reduceLeft(_ + _) )
+```
+
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwOTgzNzI5MSwxOTY2ODcyNDYzLC03OD
-M2OTg1ODMsMjgyMzA2NzMzLDEzMTIyODg1NzcsMTk5NzA5NDY0
-MywtMzcxNzUwMDA0LC0xOTg4NzYwMjI0LDgyOTYwMTU4MSwtMT
-EyOTU5ODQ2NV19
+eyJoaXN0b3J5IjpbLTE3MDc0MDExMjcsMTQwOTgzNzI5MSwxOT
+Y2ODcyNDYzLC03ODM2OTg1ODMsMjgyMzA2NzMzLDEzMTIyODg1
+NzcsMTk5NzA5NDY0MywtMzcxNzUwMDA0LC0xOTg4NzYwMjI0LD
+gyOTYwMTU4MSwtMTEyOTU5ODQ2NV19
 -->
