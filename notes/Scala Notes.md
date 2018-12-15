@@ -49,12 +49,14 @@ f(arr: _*) {
 You can change the right side of the equation inside the `{...}` in the above.
 
 You can create new **control struactures** as well because you can pass the function to higher-order function.
+
+```
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODU2MTU3ODIsLTE4MDA0NjU0NjgsLT
-EyODI5NjQwMDIsMTg5MTY3MTE1MSwtMjA5NzIxODA0NCwzMDY3
-MjI4MjEsLTE3MDc0MDExMjcsMTQwOTgzNzI5MSwxOTY2ODcyND
-YzLC03ODM2OTg1ODMsMjgyMzA2NzMzLDEzMTIyODg1NzcsMTk5
-NzA5NDY0MywtMzcxNzUwMDA0LC0xOTg4NzYwMjI0LDgyOTYwMT
-U4MSwtMTEyOTU5ODQ2NV19
+eyJoaXN0b3J5IjpbLTIwMzE3MjczNzAsLTE5ODU2MTU3ODIsLT
+E4MDA0NjU0NjgsLTEyODI5NjQwMDIsMTg5MTY3MTE1MSwtMjA5
+NzIxODA0NCwzMDY3MjI4MjEsLTE3MDc0MDExMjcsMTQwOTgzNz
+I5MSwxOTY2ODcyNDYzLC03ODM2OTg1ODMsMjgyMzA2NzMzLDEz
+MTIyODg1NzcsMTk5NzA5NDY0MywtMzcxNzUwMDA0LC0xOTg4Nz
+YwMjI0LDgyOTYwMTU4MSwtMTEyOTU5ODQ2NV19
 -->
