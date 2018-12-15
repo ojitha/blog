@@ -39,11 +39,11 @@ val s = f(arr: _*)
 s( (x:Seq[Int]) => x.reduceLeft(_ + _) )
 ```
 
-In the line# 2, the return type of the `f` is `(Seq[Int] => Int) => Int`, therefore, in line 
+In the line# 2, the return type of the `f` is `(Seq[Int] => Int) => Int`, therefore, in line# 4, you have to pass the compatible function which is compatible with the repeated parameter.
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc3NzA5MDkzLC0xNzA3NDAxMTI3LDE0MD
-k4MzcyOTEsMTk2Njg3MjQ2MywtNzgzNjk4NTgzLDI4MjMwNjcz
-MywxMzEyMjg4NTc3LDE5OTcwOTQ2NDMsLTM3MTc1MDAwNCwtMT
-k4ODc2MDIyNCw4Mjk2MDE1ODEsLTExMjk1OTg0NjVdfQ==
+eyJoaXN0b3J5IjpbLTg0MzQ0MDQ2OSwtMTcwNzQwMTEyNywxND
+A5ODM3MjkxLDE5NjY4NzI0NjMsLTc4MzY5ODU4MywyODIzMDY3
+MzMsMTMxMjI4ODU3NywxOTk3MDk0NjQzLC0zNzE3NTAwMDQsLT
+E5ODg3NjAyMjQsODI5NjAxNTgxLC0xMTI5NTk4NDY1XX0=
 -->
