@@ -57,14 +57,17 @@ GET test-index/test-type/_search?scroll=10m&size=1
 {
   "query": {
     "match_all": {}
-  }
+  },
+  "sort": [
+    "_doc"
+  ]
 }
 ```
 The result will give scrolling id.
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzAxMDM3MTA0LDg3NjIxNTMxOSwtNTE1NT
-UxNjUzLC05Njc3Mjg4MTIsMTEzNzI3MzgyMiwxMjExOTYzMDM5
-LDk4NTkxOTM2NSwxNDExODY2NzNdfQ==
+eyJoaXN0b3J5IjpbNDQ2OTk1NjgxLDcwMTAzNzEwNCw4NzYyMT
+UzMTksLTUxNTU1MTY1MywtOTY3NzI4ODEyLDExMzcyNzM4MjIs
+MTIxMTk2MzAzOSw5ODU5MTkzNjUsMTQxMTg2NjczXX0=
 -->
