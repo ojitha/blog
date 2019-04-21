@@ -31,8 +31,12 @@ GET _search
 }
 ```
 
+The final score calculated as:
+$$
+
+
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxMTk2MzAzOSw5ODU5MTkzNjUsMTQxMT
-g2NjczXX0=
+eyJoaXN0b3J5IjpbLTExNzMwODExOCwxMjExOTYzMDM5LDk4NT
+kxOTM2NSwxNDExODY2NzNdfQ==
 -->
