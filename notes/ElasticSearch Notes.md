@@ -32,9 +32,10 @@ GET _search
 ```
 
 The final score calculated as:
-final_score = query _score * query_weight
+final_score = query _score * query_weight + rescore_score * rescore_query_weight
+
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwNzU4ODI1NCwxMTM3MjczODIyLDEyMT
+eyJoaXN0b3J5IjpbLTk2NzcyODgxMiwxMTM3MjczODIyLDEyMT
 E5NjMwMzksOTg1OTE5MzY1LDE0MTE4NjY3M119
 -->
