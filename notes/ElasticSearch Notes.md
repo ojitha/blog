@@ -33,10 +33,10 @@ GET _search
 
 The final score calculated as:
 $$
-
+final_score = query _score * query_weight
 $$
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0ODEwODg4NiwxMjExOTYzMDM5LDk4NT
+eyJoaXN0b3J5IjpbMTEzNzI3MzgyMiwxMjExOTYzMDM5LDk4NT
 kxOTM2NSwxNDExODY2NzNdfQ==
 -->
