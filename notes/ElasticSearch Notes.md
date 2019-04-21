@@ -34,8 +34,26 @@ GET _search
 The final score calculated as:
 final_score = query _score * query_weight + rescore_score * rescore_query_weight
 
+To sort 
+```json
+GET test-index/test-type/_search
+{
+  "query": {
+    "match_all": {}
+  },
+  "sort": [
+    {
+      "price": {
+        "order": "desc"
+      }
+    }
+  ]
+}
+```
+
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2NzcyODgxMiwxMTM3MjczODIyLDEyMT
-E5NjMwMzksOTg1OTE5MzY1LDE0MTE4NjY3M119
+eyJoaXN0b3J5IjpbLTUxNTU1MTY1MywtOTY3NzI4ODEyLDExMz
+cyNzM4MjIsMTIxMTk2MzAzOSw5ODU5MTkzNjUsMTQxMTg2Njcz
+XX0=
 -->
