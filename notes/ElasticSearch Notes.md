@@ -64,12 +64,15 @@ GET test-index/test-type/_search?scroll=10m&size=1
 }
 ```
 The result will give scrolling id.
-To delete all the 
+To delete all the scrolling ids
+```
+DELETE _search/scroll/_all
+```
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjk1ODUzOTEsNDQ2OTk1NjgxLDcwMT
-AzNzEwNCw4NzYyMTUzMTksLTUxNTU1MTY1MywtOTY3NzI4ODEy
-LDExMzcyNzM4MjIsMTIxMTk2MzAzOSw5ODU5MTkzNjUsMTQxMT
-g2NjczXX0=
+eyJoaXN0b3J5IjpbMjAzNjkxODA4Myw0NDY5OTU2ODEsNzAxMD
+M3MTA0LDg3NjIxNTMxOSwtNTE1NTUxNjUzLC05Njc3Mjg4MTIs
+MTEzNzI3MzgyMiwxMjExOTYzMDM5LDk4NTkxOTM2NSwxNDExOD
+Y2NzNdfQ==
 -->
