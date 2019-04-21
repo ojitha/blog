@@ -50,10 +50,13 @@ GET test-index/test-type/_search
   ]
 }
 ```
+## Scrolling Query
+This will give special cursor to uniquely iterate over the documents in ES.
+
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxNTU1MTY1MywtOTY3NzI4ODEyLDExMz
-cyNzM4MjIsMTIxMTk2MzAzOSw5ODU5MTkzNjUsMTQxMTg2Njcz
-XX0=
+eyJoaXN0b3J5IjpbODc2MjE1MzE5LC01MTU1NTE2NTMsLTk2Nz
+cyODgxMiwxMTM3MjczODIyLDEyMTE5NjMwMzksOTg1OTE5MzY1
+LDE0MTE4NjY3M119
 -->
