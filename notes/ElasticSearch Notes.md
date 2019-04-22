@@ -130,10 +130,23 @@ GET test-index/test-type/_search
   }
 }
 ```
+## Suggest
+Here the way to suggest
+```json
+GET test-index/_suggest
+{
+  "suggest1": {
+    "text": "we find tester",
+    "term": {
+      "field": "parsedtext"
+    }
+  }
+}
+```
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODQ2MTU2NjksLTczNTMzMDc4Nyw1ND
+eyJoaXN0b3J5IjpbLTEyNTM0NzM4MDUsLTczNTMzMDc4Nyw1ND
 c1ODUxNjEsLTE5NDQ4NDM3OTYsMjA5MzQzMDExMSwyMDM2OTE4
 MDgzLDQ0Njk5NTY4MSw3MDEwMzcxMDQsODc2MjE1MzE5LC01MT
 U1NTE2NTMsLTk2NzcyODgxMiwxMTM3MjczODIyLDEyMTE5NjMw
