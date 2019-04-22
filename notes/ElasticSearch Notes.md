@@ -156,13 +156,13 @@ GET test-index/test-type/1/_explain
 ```
 
 ## profiling
-The time spent on query by searching or aggregating.
+The time spent on query by searching or aggregating. But this will add the overhead to the computation.
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3ODA3NjY4MywtMTI1MzQ3MzgwNSwtNz
-M1MzMwNzg3LDU0NzU4NTE2MSwtMTk0NDg0Mzc5NiwyMDkzNDMw
-MTExLDIwMzY5MTgwODMsNDQ2OTk1NjgxLDcwMTAzNzEwNCw4Nz
-YyMTUzMTksLTUxNTU1MTY1MywtOTY3NzI4ODEyLDExMzcyNzM4
-MjIsMTIxMTk2MzAzOSw5ODU5MTkzNjUsMTQxMTg2NjczXX0=
+eyJoaXN0b3J5IjpbLTgxMTM4OTY1LC0xMjUzNDczODA1LC03Mz
+UzMzA3ODcsNTQ3NTg1MTYxLC0xOTQ0ODQzNzk2LDIwOTM0MzAx
+MTEsMjAzNjkxODA4Myw0NDY5OTU2ODEsNzAxMDM3MTA0LDg3Nj
+IxNTMxOSwtNTE1NTUxNjUzLC05Njc3Mjg4MTIsMTEzNzI3Mzgy
+MiwxMjExOTYzMDM5LDk4NTkxOTM2NSwxNDExODY2NzNdfQ==
 -->
