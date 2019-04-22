@@ -69,10 +69,18 @@ To delete all the scrolling ids
 DELETE _search/scroll/_all
 ```
 
+You can use curl to delete only the scrolling id
+```bash
+curl -XDELETE localhost:9200/_search/scroll -d '
+{
+     "scroll_id" : ["DnF1ZXJ..."]
+}'
+```
+
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzNjkxODA4Myw0NDY5OTU2ODEsNzAxMD
-M3MTA0LDg3NjIxNTMxOSwtNTE1NTUxNjUzLC05Njc3Mjg4MTIs
-MTEzNzI3MzgyMiwxMjExOTYzMDM5LDk4NTkxOTM2NSwxNDExOD
-Y2NzNdfQ==
+eyJoaXN0b3J5IjpbMjA5MzQzMDExMSwyMDM2OTE4MDgzLDQ0Nj
+k5NTY4MSw3MDEwMzcxMDQsODc2MjE1MzE5LC01MTU1NTE2NTMs
+LTk2NzcyODgxMiwxMTM3MjczODIyLDEyMTE5NjMwMzksOTg1OT
+E5MzY1LDE0MTE4NjY3M119
 -->
