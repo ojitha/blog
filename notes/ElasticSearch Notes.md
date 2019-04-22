@@ -179,7 +179,7 @@ POST test-index/test-type/_update_by_query
 }
 ```
 ## bool query
-
+There is a mandatory field which should be `must` , `must not` or `should`.
 ```json
 GET test-index/test-type/_search
 {
@@ -196,10 +196,10 @@ in the first line# instead of `update` you can use `delete` to delete all the do
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDQxODQzNzQsNTYwNDE1NjkwLDE5Nj
-EyNzY4MjEsLTEyNTM0NzM4MDUsLTczNTMzMDc4Nyw1NDc1ODUx
-NjEsLTE5NDQ4NDM3OTYsMjA5MzQzMDExMSwyMDM2OTE4MDgzLD
-Q0Njk5NTY4MSw3MDEwMzcxMDQsODc2MjE1MzE5LC01MTU1NTE2
-NTMsLTk2NzcyODgxMiwxMTM3MjczODIyLDEyMTE5NjMwMzksOT
-g1OTE5MzY1LDE0MTE4NjY3M119
+eyJoaXN0b3J5IjpbMjAzMTgxNjcwMiw1NjA0MTU2OTAsMTk2MT
+I3NjgyMSwtMTI1MzQ3MzgwNSwtNzM1MzMwNzg3LDU0NzU4NTE2
+MSwtMTk0NDg0Mzc5NiwyMDkzNDMwMTExLDIwMzY5MTgwODMsND
+Q2OTk1NjgxLDcwMTAzNzEwNCw4NzYyMTUzMTksLTUxNTU1MTY1
+MywtOTY3NzI4ODEyLDExMzcyNzM4MjIsMTIxMTk2MzAzOSw5OD
+U5MTkzNjUsMTQxMTg2NjczXX0=
 -->
