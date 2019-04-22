@@ -78,7 +78,7 @@ curl -XDELETE localhost:9200/_search/scroll -d '
 ```
 
 ## After search
-This doesn't take memory 
+This doesn't take memory. This feature has been introduced ES 5.x. This is important for scrolling or pagination results. 
 
 ```json
 curl -XGET 'http://127.0.0.1:9200/test-index/test-type/_search?pretty=true' -d '
@@ -111,9 +111,9 @@ curl -XGET 'http://127.0.0.1:9200/test-index/test-type/_search?pretty=true' -d '
 ```
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjYxODIzODgsLTE5NDQ4NDM3OTYsMj
-A5MzQzMDExMSwyMDM2OTE4MDgzLDQ0Njk5NTY4MSw3MDEwMzcx
-MDQsODc2MjE1MzE5LC01MTU1NTE2NTMsLTk2NzcyODgxMiwxMT
-M3MjczODIyLDEyMTE5NjMwMzksOTg1OTE5MzY1LDE0MTE4NjY3
-M119
+eyJoaXN0b3J5IjpbNTQ3NTg1MTYxLC0xOTQ0ODQzNzk2LDIwOT
+M0MzAxMTEsMjAzNjkxODA4Myw0NDY5OTU2ODEsNzAxMDM3MTA0
+LDg3NjIxNTMxOSwtNTE1NTUxNjUzLC05Njc3Mjg4MTIsMTEzNz
+I3MzgyMiwxMjExOTYzMDM5LDk4NTkxOTM2NSwxNDExODY2NzNd
+fQ==
 -->
