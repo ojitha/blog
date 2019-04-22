@@ -178,15 +178,28 @@ POST test-index/test-type/_update_by_query
   }
 }
 ```
+## bool query
 
+```json
+GET test-index/test-type/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {"term": {"parsedtext": "joe"}}
+      ]
+    }
+  }
+}
+```
 in the first line# instead of `update` you can use `delete` to delete all the documents.
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTYwNDE1NjkwLDE5NjEyNzY4MjEsLTEyNT
-M0NzM4MDUsLTczNTMzMDc4Nyw1NDc1ODUxNjEsLTE5NDQ4NDM3
-OTYsMjA5MzQzMDExMSwyMDM2OTE4MDgzLDQ0Njk5NTY4MSw3MD
-EwMzcxMDQsODc2MjE1MzE5LC01MTU1NTE2NTMsLTk2NzcyODgx
-MiwxMTM3MjczODIyLDEyMTE5NjMwMzksOTg1OTE5MzY1LDE0MT
-E4NjY3M119
+eyJoaXN0b3J5IjpbLTIxNDQxODQzNzQsNTYwNDE1NjkwLDE5Nj
+EyNzY4MjEsLTEyNTM0NzM4MDUsLTczNTMzMDc4Nyw1NDc1ODUx
+NjEsLTE5NDQ4NDM3OTYsMjA5MzQzMDExMSwyMDM2OTE4MDgzLD
+Q0Njk5NTY4MSw3MDEwMzcxMDQsODc2MjE1MzE5LC01MTU1NTE2
+NTMsLTk2NzcyODgxMiwxMTM3MjczODIyLDEyMTE5NjMwMzksOT
+g1OTE5MzY1LDE0MTE4NjY3M119
 -->
