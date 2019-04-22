@@ -180,12 +180,13 @@ POST test-index/test-type/_update_by_query
 ```
 
 in the first line# instead of `update` you can use `delete` to delete all the documents.
+
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTgyNTI2NDQsMTk2MTI3NjgyMSwtMT
-I1MzQ3MzgwNSwtNzM1MzMwNzg3LDU0NzU4NTE2MSwtMTk0NDg0
-Mzc5NiwyMDkzNDMwMTExLDIwMzY5MTgwODMsNDQ2OTk1NjgxLD
-cwMTAzNzEwNCw4NzYyMTUzMTksLTUxNTU1MTY1MywtOTY3NzI4
-ODEyLDExMzcyNzM4MjIsMTIxMTk2MzAzOSw5ODU5MTkzNjUsMT
-QxMTg2NjczXX0=
+eyJoaXN0b3J5IjpbNTYwNDE1NjkwLDE5NjEyNzY4MjEsLTEyNT
+M0NzM4MDUsLTczNTMzMDc4Nyw1NDc1ODUxNjEsLTE5NDQ4NDM3
+OTYsMjA5MzQzMDExMSwyMDM2OTE4MDgzLDQ0Njk5NTY4MSw3MD
+EwMzcxMDQsODc2MjE1MzE5LC01MTU1NTE2NTMsLTk2NzcyODgx
+MiwxMTM3MjczODIyLDEyMTE5NjMwMzksOTg1OTE5MzY1LDE0MT
+E4NjY3M119
 -->
