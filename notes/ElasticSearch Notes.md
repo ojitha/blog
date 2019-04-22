@@ -167,11 +167,25 @@ GET test-index/test-type/_search
   ...
 ```
 
+## Update/Delete query
+
+Here you can use either update or delete
+```json
+POST test-index/test-type/_update_by_query
+{
+  "query": {
+    "match_all": {}
+  }
+}
+```
+
+in the first line# instead of `update` you can use `delete` to delete all the documents.
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2MTI3NjgyMSwtMTI1MzQ3MzgwNSwtNz
-M1MzMwNzg3LDU0NzU4NTE2MSwtMTk0NDg0Mzc5NiwyMDkzNDMw
-MTExLDIwMzY5MTgwODMsNDQ2OTk1NjgxLDcwMTAzNzEwNCw4Nz
-YyMTUzMTksLTUxNTU1MTY1MywtOTY3NzI4ODEyLDExMzcyNzM4
-MjIsMTIxMTk2MzAzOSw5ODU5MTkzNjUsMTQxMTg2NjczXX0=
+eyJoaXN0b3J5IjpbLTE2OTgyNTI2NDQsMTk2MTI3NjgyMSwtMT
+I1MzQ3MzgwNSwtNzM1MzMwNzg3LDU0NzU4NTE2MSwtMTk0NDg0
+Mzc5NiwyMDkzNDMwMTExLDIwMzY5MTgwODMsNDQ2OTk1NjgxLD
+cwMTAzNzEwNCw4NzYyMTUzMTksLTUxNTU1MTY1MywtOTY3NzI4
+ODEyLDExMzcyNzM4MjIsMTIxMTk2MzAzOSw5ODU5MTkzNjUsMT
+QxMTg2NjczXX0=
 -->
