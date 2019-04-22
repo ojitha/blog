@@ -109,11 +109,32 @@ curl -XGET 'http://127.0.0.1:9200/test-index/test-type/_search?pretty=true' -d '
      ]
  }'
 ```
+
+## Inner hits
+ES returns the documents found in the search but not the nested documents, but using inner hits you can find the nested documents as well.
+
+```json
+GET test-index/test-type/_search
+{
+  "query": {
+    "has_child": {
+      "type": "test-type2",
+      "query": {
+        "term": {
+            "value": "value1"
+          
+        }
+      },
+      "inner_hits": {}
+    }
+  }
+}
+```
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ3NTg1MTYxLC0xOTQ0ODQzNzk2LDIwOT
-M0MzAxMTEsMjAzNjkxODA4Myw0NDY5OTU2ODEsNzAxMDM3MTA0
-LDg3NjIxNTMxOSwtNTE1NTUxNjUzLC05Njc3Mjg4MTIsMTEzNz
-I3MzgyMiwxMjExOTYzMDM5LDk4NTkxOTM2NSwxNDExODY2NzNd
-fQ==
+eyJoaXN0b3J5IjpbLTczNTMzMDc4Nyw1NDc1ODUxNjEsLTE5ND
+Q4NDM3OTYsMjA5MzQzMDExMSwyMDM2OTE4MDgzLDQ0Njk5NTY4
+MSw3MDEwMzcxMDQsODc2MjE1MzE5LC01MTU1NTE2NTMsLTk2Nz
+cyODgxMiwxMTM3MjczODIyLDEyMTE5NjMwMzksOTg1OTE5MzY1
+LDE0MTE4NjY3M119
 -->
