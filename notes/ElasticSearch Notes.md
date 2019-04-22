@@ -144,12 +144,25 @@ GET test-index/_suggest
 }
 ```
 
+## Explain
+
+```json
+GET test-index/test-type/1/_explain
+{
+  "query" : {
+     "term" : {"uuid": "11111"}
+  }
+}
+```
+
+## profiling
+The time spent on query by searching or aggregating.
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDM4NDk2MzEsLTEyNTM0NzM4MDUsLT
-czNTMzMDc4Nyw1NDc1ODUxNjEsLTE5NDQ4NDM3OTYsMjA5MzQz
-MDExMSwyMDM2OTE4MDgzLDQ0Njk5NTY4MSw3MDEwMzcxMDQsOD
-c2MjE1MzE5LC01MTU1NTE2NTMsLTk2NzcyODgxMiwxMTM3Mjcz
-ODIyLDEyMTE5NjMwMzksOTg1OTE5MzY1LDE0MTE4NjY3M119
+eyJoaXN0b3J5IjpbLTc3ODA3NjY4MywtMTI1MzQ3MzgwNSwtNz
+M1MzMwNzg3LDU0NzU4NTE2MSwtMTk0NDg0Mzc5NiwyMDkzNDMw
+MTExLDIwMzY5MTgwODMsNDQ2OTk1NjgxLDcwMTAzNzEwNCw4Nz
+YyMTUzMTksLTUxNTU1MTY1MywtOTY3NzI4ODEyLDExMzcyNzM4
+MjIsMTIxMTk2MzAzOSw5ODU5MTkzNjUsMTQxMTg2NjczXX0=
 -->
