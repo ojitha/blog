@@ -76,7 +76,10 @@ curl -XDELETE localhost:9200/_search/scroll -d '
      "scroll_id" : ["DnF1ZXJ..."]
 }'
 ```
-After search
+
+## After search
+This doesn't take memory 
+
 ```json
 curl -XGET 'http://127.0.0.1:9200/test-index/test-type/_search?pretty=true' -d '
 {
@@ -108,8 +111,9 @@ curl -XGET 'http://127.0.0.1:9200/test-index/test-type/_search?pretty=true' -d '
 ```
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDQ4NDM3OTYsMjA5MzQzMDExMSwyMD
-M2OTE4MDgzLDQ0Njk5NTY4MSw3MDEwMzcxMDQsODc2MjE1MzE5
-LC01MTU1NTE2NTMsLTk2NzcyODgxMiwxMTM3MjczODIyLDEyMT
-E5NjMwMzksOTg1OTE5MzY1LDE0MTE4NjY3M119
+eyJoaXN0b3J5IjpbLTExMjYxODIzODgsLTE5NDQ4NDM3OTYsMj
+A5MzQzMDExMSwyMDM2OTE4MDgzLDQ0Njk5NTY4MSw3MDEwMzcx
+MDQsODc2MjE1MzE5LC01MTU1NTE2NTMsLTk2NzcyODgxMiwxMT
+M3MjczODIyLDEyMTE5NjMwMzksOTg1OTE5MzY1LDE0MTE4NjY3
+M119
 -->
