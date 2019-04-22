@@ -76,11 +76,15 @@ curl -XDELETE localhost:9200/_search/scroll -d '
      "scroll_id" : ["DnF1ZXJ..."]
 }'
 ```
+After search
+```json
+
+```
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5MzQzMDExMSwyMDM2OTE4MDgzLDQ0Nj
-k5NTY4MSw3MDEwMzcxMDQsODc2MjE1MzE5LC01MTU1NTE2NTMs
-LTk2NzcyODgxMiwxMTM3MjczODIyLDEyMTE5NjMwMzksOTg1OT
-E5MzY1LDE0MTE4NjY3M119
+eyJoaXN0b3J5IjpbMTI1NjU3ODkzOSwyMDkzNDMwMTExLDIwMz
+Y5MTgwODMsNDQ2OTk1NjgxLDcwMTAzNzEwNCw4NzYyMTUzMTks
+LTUxNTU1MTY1MywtOTY3NzI4ODEyLDExMzcyNzM4MjIsMTIxMT
+k2MzAzOSw5ODU5MTkzNjUsMTQxMTg2NjczXX0=
 -->
