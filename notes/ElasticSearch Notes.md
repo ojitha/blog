@@ -78,13 +78,38 @@ curl -XDELETE localhost:9200/_search/scroll -d '
 ```
 After search
 ```json
-
+curl -XGET 'http://127.0.0.1:9200/test-index/test-type/_search?pretty=true' -d '
+{
+     "size": 1,
+     "query": {
+         "match_all" : {}
+     },
+     "sort": [
+         {"price": "asc"},
+         {"_uid": "desc"}
+     ]
+ }'
 ```
+Then from the result, you can execute the following
 
+```bash
+curl -XGET 'http://127.0.0.1:9200/test-index/test-type/_search?pretty=true' -d '
+ {
+     "size": 1,
+     "query": {
+         "match_all" : {}
+     },
+     "search_after": [4.0, "test-type#1"],
+     "sort": [
+         {"price": "asc"},
+         {"_uid": "desc"}
+     ]
+ }'
+```
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1NjU3ODkzOSwyMDkzNDMwMTExLDIwMz
-Y5MTgwODMsNDQ2OTk1NjgxLDcwMTAzNzEwNCw4NzYyMTUzMTks
-LTUxNTU1MTY1MywtOTY3NzI4ODEyLDExMzcyNzM4MjIsMTIxMT
-k2MzAzOSw5ODU5MTkzNjUsMTQxMTg2NjczXX0=
+eyJoaXN0b3J5IjpbLTE5NDQ4NDM3OTYsMjA5MzQzMDExMSwyMD
+M2OTE4MDgzLDQ0Njk5NTY4MSw3MDEwMzcxMDQsODc2MjE1MzE5
+LC01MTU1NTE2NTMsLTk2NzcyODgxMiwxMTM3MjczODIyLDEyMT
+E5NjMwMzksOTg1OTE5MzY1LDE0MTE4NjY3M119
 -->
