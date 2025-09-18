@@ -1,0 +1,77 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Forward Predictive -->
+  <text x="200" y="30" text-anchor="middle" font-size="18" font-weight="bold">Forward Predictive</text>
+  
+  <!-- Forward sequence boxes -->
+  <rect x="50" y="50" width="60" height="40" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="80" y="75" text-anchor="middle" font-size="12">x₁</text>
+  
+  <rect x="120" y="50" width="60" height="40" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="150" y="75" text-anchor="middle" font-size="12">x₂</text>
+  
+  <rect x="190" y="50" width="60" height="40" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="220" y="75" text-anchor="middle" font-size="12">x₃</text>
+  
+  <rect x="260" y="50" width="60" height="40" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="290" y="75" text-anchor="middle" font-size="12">x₄</text>
+  
+  <!-- Arrow pointing right -->
+  <path d="M 330 70 L 360 70" stroke="#f44336" stroke-width="3" marker-end="url(#arrowhead-right)"/>
+  
+  <!-- Predicted box -->
+  <rect x="370" y="50" width="60" height="40" fill="#ffebee" stroke="#f44336" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="400" y="75" text-anchor="middle" font-size="12">x₅</text>
+  <text x="400" y="110" text-anchor="middle" font-size="10" fill="#f44336">Predict</text>
+  
+  <!-- Backward Predictive -->
+  <text x="200" y="180" text-anchor="middle" font-size="18" font-weight="bold">Backward Predictive</text>
+  
+  <!-- Predicted box (backward) -->
+  <rect x="50" y="200" width="60" height="40" fill="#ffebee" stroke="#f44336" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="80" y="225" text-anchor="middle" font-size="12">x₁</text>
+  <text x="80" y="260" text-anchor="middle" font-size="10" fill="#f44336">Predict</text>
+  
+  <!-- Arrow pointing left -->
+  <path d="M 120 220 L 150 220" stroke="#f44336" stroke-width="3" marker-end="url(#arrowhead-left)"/>
+  
+  <!-- Backward sequence boxes -->
+  <rect x="160" y="200" width="60" height="40" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="190" y="225" text-anchor="middle" font-size="12">x₂</text>
+  
+  <rect x="230" y="200" width="60" height="40" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="260" y="225" text-anchor="middle" font-size="12">x₃</text>
+  
+  <rect x="300" y="200" width="60" height="40" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="330" y="225" text-anchor="middle" font-size="12">x₄</text>
+  
+  <rect x="370" y="200" width="60" height="40" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="400" y="225" text-anchor="middle" font-size="12">x₅</text>
+  
+  <!-- Examples -->
+  <text x="50" y="320" font-size="14" font-weight="bold">Examples:</text>
+  <text x="50" y="340" font-size="12">Forward: GPT models, next word prediction</text>
+  <text x="50" y="355" font-size="12">Backward: Fill-in-the-blank, some BERT tasks</text>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowhead-right" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f44336"/>
+    </marker>
+    <marker id="arrowhead-left" markerWidth="10" markerHeight="7" refX="1" refY="3.5" orient="auto">
+      <polygon points="10 0, 0 3.5, 10 7" fill="#f44336"/>
+    </marker>
+  </defs>
+  
+  <!-- Legend -->
+  <rect x="500" y="50" width="250" height="120" fill="none" stroke="#666" stroke-width="1"/>
+  <text x="625" y="70" text-anchor="middle" font-size="14" font-weight="bold">Legend</text>
+  
+  <rect x="510" y="80" width="30" height="20" fill="#e3f2fd" stroke="#1976d2" stroke-width="1"/>
+  <text x="550" y="95" font-size="12">Input sequence</text>
+  
+  <rect x="510" y="110" width="30" height="20" fill="#ffebee" stroke="#f44336" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="550" y="125" font-size="12">Predicted element</text>
+  
+  <path d="M 510 145 L 530 145" stroke="#f44336" stroke-width="2" marker-end="url(#arrowhead-right)"/>
+  <text x="540" y="150" font-size="12">Prediction direction</text>
+</svg>
