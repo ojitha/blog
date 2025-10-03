@@ -1,0 +1,248 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750">
+  <!-- Background -->
+  <defs>
+    <filter id="sketch">
+      <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="2" result="turbulence"/>
+      <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2c2c2c" filter="url(#sketch)"/>
+    </marker>
+  </defs>
+  
+  <rect width="1000" height="750" fill="#f9f7f4"/>
+  
+  <!-- Title -->
+  <text x="500" y="35" font-family="'Segoe Print', cursive" font-size="28" fill="#2c2c2c" text-anchor="middle" font-weight="bold">
+    Feed Forward Network (FFN) Layer
+  </text>
+  <text x="500" y="60" font-family="'Segoe Print', cursive" font-size="14" fill="#555" text-anchor="middle">
+    Applied after attention to capture non-linear relationships
+  </text>
+  
+  <!-- Left side: Explanation boxes -->
+  <g transform="translate(30, 100)">
+    <!-- Box 1 -->
+    <g filter="url(#sketch)">
+      <rect x="0" y="0" width="320" height="90" fill="#dbeafe" stroke="#2563eb" stroke-width="2" rx="5"/>
+    </g>
+    <text x="160" y="25" font-family="'Segoe Print', cursive" font-size="13" fill="#2c2c2c" text-anchor="middle" font-weight="bold">
+      📍 Used after attention to
+    </text>
+    <text x="160" y="45" font-family="'Segoe Print', cursive" font-size="12" fill="#555" text-anchor="middle">
+      capture non-linear relationships
+    </text>
+    <text x="160" y="62" font-family="'Segoe Print', cursive" font-size="12" fill="#555" text-anchor="middle">
+      Each position processed independently
+    </text>
+    <text x="160" y="79" font-family="'Segoe Print', cursive" font-size="11" fill="#777" text-anchor="middle" font-style="italic">
+      (no interaction between tokens here)
+    </text>
+    
+    <!-- Box 2 -->
+    <g filter="url(#sketch)" transform="translate(0, 110)">
+      <rect x="0" y="0" width="320" height="85" fill="#fef3c7" stroke="#b45309" stroke-width="2" rx="5"/>
+    </g>
+    <text x="160" y="135" font-family="'Segoe Print', cursive" font-size="13" fill="#2c2c2c" text-anchor="middle" font-weight="bold">
+      🔢 4x dimension expansion
+    </text>
+    <text x="160" y="155" font-family="'Segoe Print', cursive" font-size="12" fill="#555" text-anchor="middle">
+      Hidden layer uses ReLU to
+    </text>
+    <text x="160" y="172" font-family="'Segoe Print', cursive" font-size="12" fill="#555" text-anchor="middle">
+      uncover non-linear patterns
+    </text>
+    <text x="160" y="189" font-family="'Segoe Print', cursive" font-size="11" fill="#777" text-anchor="middle" font-style="italic">
+      More capacity = richer representations
+    </text>
+    
+    <!-- Box 3 -->
+    <g filter="url(#sketch)" transform="translate(0, 215)">
+      <rect x="0" y="0" width="320" height="75" fill="#dcfce7" stroke="#16a34a" stroke-width="2" rx="5"/>
+    </g>
+    <text x="160" y="240" font-family="'Segoe Print', cursive" font-size="13" fill="#2c2c2c" text-anchor="middle" font-weight="bold">
+      🎯 Output layer compresses
+    </text>
+    <text x="160" y="260" font-family="'Segoe Print', cursive" font-size="12" fill="#555" text-anchor="middle">
+      back down to original embedding
+    </text>
+    <text x="160" y="277" font-family="'Segoe Print', cursive" font-size="12" fill="#555" text-anchor="middle">
+      size (e.g., 12,288 for GPT-3)
+    </text>
+  </g>
+  
+  <!-- Neural network diagram -->
+  <g transform="translate(450, 120)">
+    <!-- Input layer (left) - 3 neurons shown -->
+    <g filter="url(#sketch)">
+      <circle cx="50" cy="80" r="28" fill="#93c5fd" stroke="#2c2c2c" stroke-width="2"/>
+      <circle cx="50" cy="200" r="28" fill="#93c5fd" stroke="#2c2c2c" stroke-width="2"/>
+      <circle cx="50" cy="320" r="28" fill="#93c5fd" stroke="#2c2c2c" stroke-width="2"/>
+    </g>
+    
+    <!-- Input layer label -->
+    <text x="50" y="380" font-family="'Segoe Print', cursive" font-size="13" fill="#2c2c2c" text-anchor="middle" font-weight="bold">
+      Input Layer
+    </text>
+    <text x="50" y="398" font-family="'Segoe Print', cursive" font-size="11" fill="#555" text-anchor="middle">
+      (12,288
+    </text>
+    <text x="50" y="413" font-family="'Segoe Print', cursive" font-size="11" fill="#555" text-anchor="middle">
+      dimensions)
+    </text>
+    
+    <!-- Hidden layer (middle) - 4 neurons shown (representing 4x expansion) -->
+    <g filter="url(#sketch)">
+      <circle cx="250" cy="30" r="32" fill="#9ca3af" stroke="#2c2c2c" stroke-width="2"/>
+      <circle cx="250" cy="140" r="32" fill="#9ca3af" stroke="#2c2c2c" stroke-width="2"/>
+      <circle cx="250" cy="250" r="32" fill="#9ca3af" stroke="#2c2c2c" stroke-width="2"/>
+      <circle cx="250" cy="360" r="32" fill="#9ca3af" stroke="#2c2c2c" stroke-width="2"/>
+    </g>
+    
+    <!-- Hidden layer label -->
+    <text x="250" y="420" font-family="'Segoe Print', cursive" font-size="12" fill="#2c2c2c" text-anchor="middle" font-weight="bold">
+      Non-Linear (ReLU)
+    </text>
+    <text x="250" y="437" font-family="'Segoe Print', cursive" font-size="11" fill="#555" text-anchor="middle">
+      hidden layer with 4x
+    </text>
+    <text x="250" y="452" font-family="'Segoe Print', cursive" font-size="11" fill="#555" text-anchor="middle">
+      dimension expansion
+    </text>
+    <text x="250" y="469" font-family="'Segoe Print', cursive" font-size="10" fill="#777" text-anchor="middle" font-style="italic">
+      (49,152 for GPT-3)
+    </text>
+    
+    <!-- Output layer (right) - 3 neurons shown -->
+    <g filter="url(#sketch)">
+      <circle cx="450" cy="80" r="28" fill="#fde047" stroke="#2c2c2c" stroke-width="2"/>
+      <circle cx="450" cy="200" r="28" fill="#fde047" stroke="#2c2c2c" stroke-width="2"/>
+      <circle cx="450" cy="320" r="28" fill="#fde047" stroke="#2c2c2c" stroke-width="2"/>
+    </g>
+    
+    <!-- Output layer label -->
+    <text x="450" y="380" font-family="'Segoe Print', cursive" font-size="12" fill="#2c2c2c" text-anchor="middle" font-weight="bold">
+      Linear Output layer
+    </text>
+    <text x="450" y="398" font-family="'Segoe Print', cursive" font-size="11" fill="#555" text-anchor="middle">
+      (back to 12,288
+    </text>
+    <text x="450" y="413" font-family="'Segoe Print', cursive" font-size="11" fill="#555" text-anchor="middle">
+      dimensions)
+    </text>
+    
+    <!-- Connections from input to hidden -->
+    <g stroke="#4b5563" stroke-width="1.5" opacity="0.4" filter="url(#sketch)">
+      <!-- From first input neuron -->
+      <line x1="78" y1="80" x2="218" y2="30"/>
+      <line x1="78" y1="80" x2="218" y2="140"/>
+      <line x1="78" y1="80" x2="218" y2="250"/>
+      <line x1="78" y1="80" x2="218" y2="360"/>
+      
+      <!-- From second input neuron -->
+      <line x1="78" y1="200" x2="218" y2="30"/>
+      <line x1="78" y1="200" x2="218" y2="140"/>
+      <line x1="78" y1="200" x2="218" y2="250"/>
+      <line x1="78" y1="200" x2="218" y2="360"/>
+      
+      <!-- From third input neuron -->
+      <line x1="78" y1="320" x2="218" y2="30"/>
+      <line x1="78" y1="320" x2="218" y2="140"/>
+      <line x1="78" y1="320" x2="218" y2="250"/>
+      <line x1="78" y1="320" x2="218" y2="360"/>
+    </g>
+    
+    <!-- Connections from hidden to output -->
+    <g stroke="#4b5563" stroke-width="1.5" opacity="0.4" filter="url(#sketch)">
+      <!-- To first output neuron -->
+      <line x1="282" y1="30" x2="422" y2="80"/>
+      <line x1="282" y1="140" x2="422" y2="80"/>
+      <line x1="282" y1="250" x2="422" y2="80"/>
+      <line x1="282" y1="360" x2="422" y2="80"/>
+      
+      <!-- To second output neuron -->
+      <line x1="282" y1="30" x2="422" y2="200"/>
+      <line x1="282" y1="140" x2="422" y2="200"/>
+      <line x1="282" y1="250" x2="422" y2="200"/>
+      <line x1="282" y1="360" x2="422" y2="200"/>
+      
+      <!-- To third output neuron -->
+      <line x1="282" y1="30" x2="422" y2="320"/>
+      <line x1="282" y1="140" x2="422" y2="320"/>
+      <line x1="282" y1="250" x2="422" y2="320"/>
+      <line x1="282" y1="360" x2="422" y2="320"/>
+    </g>
+    
+    <!-- Annotation arrows and labels -->
+    <g stroke="#2c2c2c" stroke-width="1.5" fill="none" filter="url(#sketch)">
+      <!-- Expansion arrow -->
+      <path d="M 120 60 L 180 40" marker-end="url(#arrowhead)"/>
+    </g>
+    <text x="130" y="50" font-family="'Segoe Print', cursive" font-size="10" fill="#b45309">
+      4x expansion →
+    </text>
+    
+    <g stroke="#2c2c2c" stroke-width="1.5" fill="none" filter="url(#sketch)">
+      <!-- Compression arrow -->
+      <path d="M 320 60 L 380 70" marker-end="url(#arrowhead)"/>
+    </g>
+    <text x="310" y="50" font-family="'Segoe Print', cursive" font-size="10" fill="#16a34a">
+      ← compress back
+    </text>
+  </g>
+  
+  <!-- Mathematical formula -->
+  <g transform="translate(100, 550)">
+    <g filter="url(#sketch)">
+      <rect x="0" y="0" width="800" height="70" fill="#f3f4f6" stroke="#6b7280" stroke-width="2" rx="5"/>
+    </g>
+    <text x="400" y="25" font-family="'Segoe Print', cursive" font-size="14" fill="#2c2c2c" text-anchor="middle" font-weight="bold">
+      FFN Formula:
+    </text>
+    <text x="400" y="48" font-family="'Courier New', monospace" font-size="13" fill="#4f46e5" text-anchor="middle">
+      FFN(x) = ReLU(x W₁ + b₁) W₂ + b₂
+    </text>
+    <text x="400" y="65" font-family="'Segoe Print', cursive" font-size="10" fill="#555" text-anchor="middle">
+      where W₁ expands dimensions (d → 4d) and W₂ compresses back (4d → d)
+    </text>
+  </g>
+  
+  <!-- Key insights box -->
+  <g transform="translate(100, 640)">
+    <g filter="url(#sketch)">
+      <rect x="0" y="0" width="380" height="75" fill="#fef3c7" stroke="#b45309" stroke-width="2" rx="5"/>
+    </g>
+    <text x="190" y="22" font-family="'Segoe Print', cursive" font-size="13" fill="#2c2c2c" text-anchor="middle" font-weight="bold">
+      💡 Why Non-Linearity Matters
+    </text>
+    <text x="190" y="40" font-family="'Segoe Print', cursive" font-size="11" fill="#555" text-anchor="middle">
+      Attention performs linear operations (weighted sums)
+    </text>
+    <text x="190" y="55" font-family="'Segoe Print', cursive" font-size="11" fill="#555" text-anchor="middle">
+      FFN adds non-linear transformations via ReLU,
+    </text>
+    <text x="190" y="70" font-family="'Segoe Print', cursive" font-size="11" fill="#555" text-anchor="middle">
+      enabling the model to learn complex patterns!
+    </text>
+  </g>
+  
+  <!-- Position-wise note -->
+  <g transform="translate(500, 640)">
+    <g filter="url(#sketch)">
+      <rect x="0" y="0" width="380" height="75" fill="#dcfce7" stroke="#16a34a" stroke-width="2" rx="5"/>
+    </g>
+    <text x="190" y="22" font-family="'Segoe Print', cursive" font-size="13" fill="#2c2c2c" text-anchor="middle" font-weight="bold">
+      🎯 Position-wise Processing
+    </text>
+    <text x="190" y="40" font-family="'Segoe Print', cursive" font-size="11" fill="#555" text-anchor="middle">
+      Same FFN applied independently to each token
+    </text>
+    <text x="190" y="55" font-family="'Segoe Print', cursive" font-size="11" fill="#555" text-anchor="middle">
+      No information sharing between positions
+    </text>
+    <text x="190" y="70" font-family="'Segoe Print', cursive" font-size="11" fill="#555" text-anchor="middle">
+      (that's what attention is for!)
+    </text>
+  </g>
+</svg>

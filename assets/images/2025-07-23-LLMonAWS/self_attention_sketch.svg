@@ -1,0 +1,229 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700">
+  <!-- Background with paper texture -->
+  <defs>
+    <filter id="pencilTexture">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise"/>
+      <feDiffuseLighting in="noise" lighting-color="#333" surfaceScale="1">
+        <feDistantLight azimuth="45" elevation="60"/>
+      </feDiffuseLighting>
+    </filter>
+    
+    <filter id="sketch">
+      <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="2" result="turbulence"/>
+      <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2c2c2c" filter="url(#sketch)"/>
+    </marker>
+    
+    <marker id="arrowhead-blue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2563eb" filter="url(#sketch)"/>
+    </marker>
+  </defs>
+  
+  <!-- Paper background -->
+  <rect width="900" height="700" fill="#f9f7f4"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" font-family="'Segoe Print', 'Comic Sans MS', cursive" font-size="26" fill="#2c2c2c" text-anchor="middle" font-weight="bold">
+    Self-Attention Mechanism
+  </text>
+  <text x="450" y="58" font-family="'Segoe Print', cursive" font-size="13" fill="#555" text-anchor="middle">
+    How each word attends to all other words in the sequence
+  </text>
+  
+  <!-- Example sentence with boxes -->
+  <g font-family="'Segoe Print', cursive" font-size="16" fill="#2c2c2c">
+    <text x="450" y="95" text-anchor="middle" font-weight="bold">Input: "The cat sat on the mat"</text>
+  </g>
+  
+  <!-- Word boxes (sketchy rectangles) -->
+  <g filter="url(#sketch)">
+    <rect x="100" y="115" width="80" height="45" fill="#fff" stroke="#2c2c2c" stroke-width="2" rx="3"/>
+    <rect x="195" y="115" width="80" height="45" fill="#fef3c7" stroke="#2c2c2c" stroke-width="2" rx="3"/>
+    <rect x="290" y="115" width="80" height="45" fill="#fff" stroke="#2c2c2c" stroke-width="2" rx="3"/>
+    <rect x="385" y="115" width="80" height="45" fill="#fff" stroke="#2c2c2c" stroke-width="2" rx="3"/>
+    <rect x="480" y="115" width="80" height="45" fill="#fff" stroke="#2c2c2c" stroke-width="2" rx="3"/>
+    <rect x="575" y="115" width="80" height="45" fill="#fff" stroke="#2c2c2c" stroke-width="2" rx="3"/>
+  </g>
+  
+  <!-- Words in boxes -->
+  <g font-family="'Segoe Print', cursive" font-size="15" fill="#2c2c2c" text-anchor="middle">
+    <text x="140" y="145">The</text>
+    <text x="235" y="145" font-weight="bold">cat</text>
+    <text x="330" y="145">sat</text>
+    <text x="425" y="145">on</text>
+    <text x="520" y="145">the</text>
+    <text x="615" y="145">mat</text>
+  </g>
+  
+  <!-- Focus annotation -->
+  <text x="235" y="180" font-family="'Segoe Print', cursive" font-size="11" fill="#b45309" text-anchor="middle">
+    ↓ focusing on "cat" ↓
+  </text>
+  
+  <!-- Q, K, V vectors section -->
+  <g transform="translate(0, 200)">
+    <!-- Q, K, V boxes for "cat" -->
+    <g filter="url(#sketch)">
+      <!-- Query -->
+      <rect x="50" y="0" width="100" height="60" fill="#dbeafe" stroke="#2563eb" stroke-width="2" rx="3"/>
+      <text x="100" y="25" font-family="'Segoe Print', cursive" font-size="13" fill="#1e40af" text-anchor="middle" font-weight="bold">Query (Q)</text>
+      <text x="100" y="42" font-family="'Segoe Print', cursive" font-size="11" fill="#1e40af" text-anchor="middle">"What am I</text>
+      <text x="100" y="55" font-family="'Segoe Print', cursive" font-size="11" fill="#1e40af" text-anchor="middle">looking for?"</text>
+      
+      <!-- Key -->
+      <rect x="180" y="0" width="100" height="60" fill="#dcfce7" stroke="#16a34a" stroke-width="2" rx="3"/>
+      <text x="230" y="25" font-family="'Segoe Print', cursive" font-size="13" fill="#15803d" text-anchor="middle" font-weight="bold">Key (K)</text>
+      <text x="230" y="42" font-family="'Segoe Print', cursive" font-size="11" fill="#15803d" text-anchor="middle">"What do I</text>
+      <text x="230" y="55" font-family="'Segoe Print', cursive" font-size="11" fill="#15803d" text-anchor="middle">contain?"</text>
+      
+      <!-- Value -->
+      <rect x="310" y="0" width="100" height="60" fill="#fce7f3" stroke="#db2777" stroke-width="2" rx="3"/>
+      <text x="360" y="25" font-family="'Segoe Print', cursive" font-size="13" fill="#be185d" text-anchor="middle" font-weight="bold">Value (V)</text>
+      <text x="360" y="42" font-family="'Segoe Print', cursive" font-size="11" fill="#be185d" text-anchor="middle">"What info</text>
+      <text x="360" y="55" font-family="'Segoe Print', cursive" font-size="11" fill="#be185d" text-anchor="middle">do I offer?"</text>
+    </g>
+    
+    <!-- Annotation -->
+    <text x="230" y="85" font-family="'Segoe Print', cursive" font-size="11" fill="#555" text-anchor="middle">
+      Each word creates Q, K, V vectors from its embedding
+    </text>
+  </g>
+  
+  <!-- Attention computation -->
+  <g transform="translate(0, 320)">
+    <!-- Step 1: Q · K -->
+    <g filter="url(#sketch)">
+      <ellipse cx="140" cy="30" rx="120" ry="35" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+    </g>
+    <text x="140" y="25" font-family="'Segoe Print', cursive" font-size="12" fill="#2c2c2c" text-anchor="middle" font-weight="bold">
+      1. Compute Q · K^T
+    </text>
+    <text x="140" y="40" font-family="'Segoe Print', cursive" font-size="10" fill="#555" text-anchor="middle">
+      (attention scores)
+    </text>
+    
+    <!-- Arrow -->
+    <path d="M 260 30 L 310 30" stroke="#2c2c2c" stroke-width="2" marker-end="url(#arrowhead)" filter="url(#sketch)"/>
+    
+    <!-- Step 2: Softmax -->
+    <g filter="url(#sketch)">
+      <ellipse cx="395" cy="30" rx="75" ry="35" fill="#e0e7ff" stroke="#4f46e5" stroke-width="2"/>
+    </g>
+    <text x="395" y="25" font-family="'Segoe Print', cursive" font-size="12" fill="#2c2c2c" text-anchor="middle" font-weight="bold">
+      2. Softmax
+    </text>
+    <text x="395" y="40" font-family="'Segoe Print', cursive" font-size="10" fill="#555" text-anchor="middle">
+      (normalize)
+    </text>
+    
+    <!-- Arrow -->
+    <path d="M 470 30 L 520 30" stroke="#2c2c2c" stroke-width="2" marker-end="url(#arrowhead)" filter="url(#sketch)"/>
+    
+    <!-- Step 3: Weighted sum -->
+    <g filter="url(#sketch)">
+      <ellipse cx="640" cy="30" rx="110" ry="35" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    </g>
+    <text x="640" y="25" font-family="'Segoe Print', cursive" font-size="12" fill="#2c2c2c" text-anchor="middle" font-weight="bold">
+      3. Σ (weights × V)
+    </text>
+    <text x="640" y="40" font-family="'Segoe Print', cursive" font-size="10" fill="#555" text-anchor="middle">
+      (output)
+    </text>
+  </g>
+  
+  <!-- Attention weights visualization -->
+  <g transform="translate(0, 420)">
+    <text x="100" y="0" font-family="'Segoe Print', cursive" font-size="14" fill="#2c2c2c" font-weight="bold">
+      Attention Weights for "cat":
+    </text>
+    
+    <!-- Word labels -->
+    <g font-family="'Segoe Print', cursive" font-size="12" fill="#2c2c2c" text-anchor="middle">
+      <text x="140" y="30">The</text>
+      <text x="235" y="30" font-weight="bold">cat</text>
+      <text x="330" y="30">sat</text>
+      <text x="425" y="30">on</text>
+      <text x="520" y="30">the</text>
+      <text x="615" y="30">mat</text>
+    </g>
+    
+    <!-- Attention bars (hand-drawn) -->
+    <g filter="url(#sketch)">
+      <!-- The: 0.05 -->
+      <rect x="110" y="40" width="60" height="10" fill="#e0e7ff" stroke="#2c2c2c" stroke-width="1"/>
+      <text x="173" y="58" font-family="'Segoe Print', cursive" font-size="10" fill="#555">0.05</text>
+      
+      <!-- cat: 0.45 (highest) -->
+      <rect x="205" y="40" width="60" height="90" fill="#3b82f6" stroke="#2c2c2c" stroke-width="1"/>
+      <text x="268" y="138" font-family="'Segoe Print', cursive" font-size="10" fill="#555" font-weight="bold">0.45</text>
+      
+      <!-- sat: 0.25 -->
+      <rect x="300" y="40" width="60" height="50" fill="#93c5fd" stroke="#2c2c2c" stroke-width="1"/>
+      <text x="363" y="98" font-family="'Segoe Print', cursive" font-size="10" fill="#555">0.25</text>
+      
+      <!-- on: 0.10 -->
+      <rect x="395" y="40" width="60" height="20" fill="#dbeafe" stroke="#2c2c2c" stroke-width="1"/>
+      <text x="458" y="68" font-family="'Segoe Print', cursive" font-size="10" fill="#555">0.10</text>
+      
+      <!-- the: 0.05 -->
+      <rect x="490" y="40" width="60" height="10" fill="#e0e7ff" stroke="#2c2c2c" stroke-width="1"/>
+      <text x="553" y="58" font-family="'Segoe Print', cursive" font-size="10" fill="#555">0.05</text>
+      
+      <!-- mat: 0.10 -->
+      <rect x="585" y="40" width="60" height="20" fill="#dbeafe" stroke="#2c2c2c" stroke-width="1"/>
+      <text x="648" y="68" font-family="'Segoe Print', cursive" font-size="10" fill="#555">0.10</text>
+    </g>
+    
+    <!-- Annotation arrows -->
+    <g stroke="#b45309" stroke-width="1.5" fill="none" filter="url(#sketch)">
+      <path d="M 235 140 L 235 150" marker-end="url(#arrowhead)"/>
+    </g>
+    <text x="235" y="167" font-family="'Segoe Print', cursive" font-size="11" fill="#b45309" text-anchor="middle">
+      "cat" attends mostly to itself
+    </text>
+    <text x="235" y="180" font-family="'Segoe Print', cursive" font-size="11" fill="#b45309" text-anchor="middle">
+      and its context "sat"
+    </text>
+  </g>
+  
+  <!-- Bottom explanation boxes -->
+  <g transform="translate(50, 620)">
+    <!-- Multi-head attention note -->
+    <g filter="url(#sketch)">
+      <rect x="0" y="0" width="380" height="60" fill="#fef3c7" stroke="#b45309" stroke-width="2" rx="5"/>
+    </g>
+    <text x="190" y="22" font-family="'Segoe Print', cursive" font-size="13" fill="#2c2c2c" text-anchor="middle" font-weight="bold">
+      🎯 Multi-Head Attention
+    </text>
+    <text x="190" y="38" font-family="'Segoe Print', cursive" font-size="11" fill="#555" text-anchor="middle">
+      Run multiple attention heads in parallel
+    </text>
+    <text x="190" y="52" font-family="'Segoe Print', cursive" font-size="11" fill="#555" text-anchor="middle">
+      Each head learns different relationships!
+    </text>
+    
+    <!-- Key insight -->
+    <g filter="url(#sketch)">
+      <rect x="400" y="0" width="400" height="60" fill="#dcfce7" stroke="#16a34a" stroke-width="2" rx="5"/>
+    </g>
+    <text x="600" y="22" font-family="'Segoe Print', cursive" font-size="13" fill="#2c2c2c" text-anchor="middle" font-weight="bold">
+      💡 Key Insight
+    </text>
+    <text x="600" y="38" font-family="'Segoe Print', cursive" font-size="11" fill="#555" text-anchor="middle">
+      Self-attention lets every word look at every other word
+    </text>
+    <text x="600" y="52" font-family="'Segoe Print', cursive" font-size="11" fill="#555" text-anchor="middle">
+      to build context-aware representations in parallel!
+    </text>
+  </g>
+  
+  <!-- Formula annotation -->
+  <g transform="translate(450, 380)">
+    <text x="0" y="0" font-family="'Segoe Print', cursive" font-size="11" fill="#4f46e5" font-style="italic">
+      Attention(Q,K,V) = softmax(QK^T/√d_k)V
+    </text>
+  </g>
+</svg>
