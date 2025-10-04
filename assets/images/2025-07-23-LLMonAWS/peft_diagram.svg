@@ -181,6 +181,6 @@
   </defs>
   
   <!-- Comparison line -->
-  <line x1="400" y="100" x2="400" y="470" stroke="#95a5a6" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="400" y1="100" x2="400" y2="470" stroke="#95a5a6" stroke-width="2" stroke-dasharray="5,5"/>
   <text x="420" y="280" font-size="12" fill="#7f8c8d" transform="rotate(90 420 280)">vs</text>
 </svg>
