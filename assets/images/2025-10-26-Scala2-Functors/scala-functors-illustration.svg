@@ -1,0 +1,89 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      .text-main { font-family: 'Arial', sans-serif; font-size: 12px; font-weight: bold; }
+      .text-small { font-family: 'Arial', sans-serif; font-size: 10px; }
+    </style>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="200" height="200" fill="#f8fafc"/>
+  
+  <!-- Background decorative elements -->
+  <circle cx="30" cy="30" r="40" fill="#e0e7ff" opacity="0.3"/>
+  <circle cx="170" cy="170" r="50" fill="#d1fae5" opacity="0.3"/>
+  
+  <!-- Main container box (representing F[A]) -->
+  <rect x="30" y="60" width="60" height="60" fill="url(#grad1)" rx="8" opacity="0.9"/>
+  <rect x="30" y="60" width="60" height="60" fill="none" stroke="#4f46e5" stroke-width="2.5" rx="8"/>
+  <text x="60" y="90" text-anchor="middle" class="text-main" fill="white">F[A]</text>
+  
+  <!-- Transform arrow with map notation -->
+  <g>
+    <path d="M 95,90 L 105,90" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+    <text x="100" y="80" text-anchor="middle" class="text-small" fill="#f59e0b" font-weight="bold" font-style="italic">map</text>
+    <path d="M 105,85 L 115,90 L 105,95 Z" fill="#f59e0b"/>
+  </g>
+  
+  <!-- Result container box (representing F[B]) -->
+  <rect x="115" y="60" width="60" height="60" fill="url(#grad2)" rx="8" opacity="0.9"/>
+  <rect x="115" y="60" width="60" height="60" fill="none" stroke="#059669" stroke-width="2.5" rx="8"/>
+  <text x="145" y="90" text-anchor="middle" class="text-main" fill="white">F[B]</text>
+  
+  <!-- Function notation -->
+  <g>
+    <text x="100" y="50" text-anchor="middle" class="text-small" fill="#64748b" font-weight="bold">f: A → B</text>
+    <path d="M 80,52 L 120,52" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="3,3"/>
+  </g>
+  
+  <!-- Inner transformation representation -->
+  <circle cx="60" cy="105" r="10" fill="#c7d2fe" stroke="#4f46e5" stroke-width="2"/>
+  <text x="60" y="110" text-anchor="middle" class="text-small" fill="#4f46e5" font-weight="bold">a</text>
+  
+  <circle cx="145" cy="105" r="10" fill="#a7f3d0" stroke="#059669" stroke-width="2"/>
+  <text x="145" y="110" text-anchor="middle" class="text-small" fill="#059669" font-weight="bold">b</text>
+  
+  <!-- Category theory arrows below -->
+  <g transform="translate(20, 145)">
+    <circle cx="20" cy="20" r="14" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+    <text x="20" y="25" text-anchor="middle" class="text-small" fill="#f59e0b" font-weight="bold">A</text>
+    
+    <path d="M 38,20 L 62,20" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M 62,16 L 70,20 L 62,24 Z" fill="#ef4444"/>
+    <text x="50" y="14" text-anchor="middle" class="text-small" fill="#ef4444" font-weight="bold" font-style="italic">f</text>
+    
+    <circle cx="80" cy="20" r="14" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+    <text x="80" y="25" text-anchor="middle" class="text-small" fill="#f59e0b" font-weight="bold">B</text>
+    
+    <!-- Functor F mapping -->
+    <path d="M 20,37 L 20,48" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="2,2"/>
+    <text x="28" y="44" class="text-small" fill="#8b5cf6" font-weight="bold" font-style="italic">F</text>
+    
+    <path d="M 80,37 L 80,48" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="2,2"/>
+    <text x="88" y="44" class="text-small" fill="#8b5cf6" font-weight="bold" font-style="italic">F</text>
+  </g>
+  
+  <!-- Scala logo hint - simplified lambda -->
+  <g transform="translate(165, 10)">
+    <circle cx="10" cy="10" r="12" fill="#dc2626" opacity="0.9"/>
+    <text x="10" y="16" text-anchor="middle" class="text-main" fill="white" font-size="14px">λ</text>
+  </g>
+  
+  <!-- Title -->
+  <rect x="60" y="8" width="80" height="22" fill="#1e293b" rx="4"/>
+  <text x="100" y="22" text-anchor="middle" class="text-main" fill="white" font-size="13px">Functors</text>
+  
+  <!-- Decorative elements -->
+  <circle cx="15" cy="15" r="3" fill="#ec4899" opacity="0.7"/>
+  <circle cx="185" cy="185" r="3" fill="#06b6d4" opacity="0.7"/>
+  <circle cx="15" cy="185" r="2" fill="#8b5cf6" opacity="0.5"/>
+  <circle cx="185" cy="15" r="2" fill="#10b981" opacity="0.5"/>
+</svg>
