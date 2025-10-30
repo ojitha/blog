@@ -1,0 +1,97 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+  <!-- Define styles with colors -->
+  <defs>
+    <style>
+      .main-circle { stroke: #2c3e50; stroke-width: 2.5; fill: #3498db; stroke-linecap: round; stroke-linejoin: round; }
+      .seq-circle { stroke: #2c3e50; stroke-width: 1.5; fill: #f39c12; }
+      .set-circle { stroke: #2c3e50; stroke-width: 1.5; fill: #e74c3c; }
+      .map-circle { stroke: #2c3e50; stroke-width: 1.5; fill: #27ae60; }
+      .sub-type-circle { stroke: #2c3e50; stroke-width: 1.5; fill: #95a5a6; }
+      .connector-line { stroke: #34495e; stroke-width: 1.5; stroke-linecap: round; }
+      .text-main { fill: #fff; font-weight: bold; text-anchor: middle; }
+      .text-sub { fill: #2c3e50; font-weight: bold; text-anchor: middle; }
+      .math-symbol { fill: #2c3e50; font-weight: bold; text-anchor: middle; font-size: 9; }
+      .legend-box { stroke: #2c3e50; stroke-width: 1.5; fill: #ecf0f1; }
+      .legend-text { fill: #2c3e50; text-anchor: start; }
+    </style>
+  </defs>
+  
+  <!-- Central circle representing Iterable -->
+  <circle cx="100" cy="50" r="18" class="main-circle"/>
+  <text x="100" y="53" font-size="9" class="text-main">Iterable</text>
+  <text x="115" y="45" class="math-symbol">∀</text>
+  
+  <!-- Seq branch (left) with arrow -->
+  <line x1="85" y1="65" x2="60" y2="85" class="connector-line"/>
+  <polygon points="56,83 58,88 62,85" fill="#34495e"/>
+  <circle cx="60" cy="95" r="14" class="seq-circle"/>
+  <text x="60" y="98" font-size="8" class="text-sub">Seq</text>
+  <text x="48" y="88" class="math-symbol">→</text>
+  
+  <!-- Set branch (middle) with arrow -->
+  <line x1="100" y1="68" x2="100" y2="85" class="connector-line"/>
+  <polygon points="97,83 100,88 103,83" fill="#34495e"/>
+  <circle cx="100" cy="95" r="14" class="set-circle"/>
+  <text x="100" y="98" font-size="8" class="text-main">Set</text>
+  <text x="100" y="78" class="math-symbol">∋</text>
+  
+  <!-- Map branch (right) with arrow -->
+  <line x1="115" y1="65" x2="140" y2="85" class="connector-line"/>
+  <polygon points="142,83 140,88 138,83" fill="#34495e"/>
+  <circle cx="140" cy="95" r="14" class="map-circle"/>
+  <text x="140" y="98" font-size="8" class="text-main">Map</text>
+  <text x="152" y="88" class="math-symbol">×</text>
+  
+  <!-- Seq sub-types -->
+  <line x1="50" y1="108" x2="35" y2="125" class="connector-line"/>
+  <circle cx="35" cy="135" r="11" class="sub-type-circle"/>
+  <text x="35" y="137" font-size="7" class="text-sub">List</text>
+  <text x="27" y="115" font-size="7" class="math-symbol">::</text>
+  
+  <line x1="60" y1="108" x2="60" y2="125" class="connector-line"/>
+  <circle cx="60" cy="135" r="11" class="sub-type-circle"/>
+  <text x="60" y="137" font-size="7" class="text-sub">Vector</text>
+  <text x="60" y="115" font-size="7" class="math-symbol">[]</text>
+  
+  <!-- Set sub-types -->
+  <line x1="92" y1="108" x2="85" y2="125" class="connector-line"/>
+  <circle cx="85" cy="135" r="11" class="sub-type-circle"/>
+  <text x="85" y="137" font-size="7" class="text-sub">HashSet</text>
+  <text x="92" y="115" font-size="7" class="math-symbol">⊂</text>
+  
+  <line x1="108" y1="108" x2="115" y2="125" class="connector-line"/>
+  <circle cx="115" cy="135" r="11" class="sub-type-circle"/>
+  <text x="115" y="137" font-size="7" class="text-sub">TreeSet</text>
+  <text x="122" y="115" font-size="7" class="math-symbol">≤</text>
+  
+  <!-- Map sub-types -->
+  <line x1="132" y1="108" x2="125" y2="125" class="connector-line"/>
+  <circle cx="125" cy="135" r="11" class="sub-type-circle"/>
+  <text x="125" y="137" font-size="7" class="text-sub">HashMap</text>
+  <text x="132" y="115" font-size="7" class="math-symbol">↦</text>
+  
+  <line x1="148" y1="108" x2="155" y2="125" class="connector-line"/>
+  <circle cx="155" cy="135" r="11" class="sub-type-circle"/>
+  <text x="155" y="137" font-size="7" class="text-sub">TreeMap</text>
+  <text x="162" y="115" font-size="7" class="math-symbol">⊗</text>
+  
+  <!-- Immutable/Mutable legend -->
+  <g>
+    <rect x="12" y="153" width="176" height="42" class="legend-box" rx="3"/>
+    <text x="18" y="167" font-size="8" font-weight="bold" class="legend-text">Immutable (≡) | Mutable (↔)</text>
+    <circle cx="22" cy="177" r="3" fill="#3498db"/>
+    <text x="32" y="181" font-size="6" class="legend-text">Core</text>
+    
+    <circle cx="65" cy="177" r="3" fill="#f39c12"/>
+    <text x="75" y="181" font-size="6" class="legend-text">Seq</text>
+    
+    <circle cx="100" cy="177" r="3" fill="#e74c3c"/>
+    <text x="110" y="181" font-size="6" class="legend-text">Set</text>
+    
+    <circle cx="135" cy="177" r="3" fill="#27ae60"/>
+    <text x="145" y="181" font-size="6" class="legend-text">Map</text>
+  </g>
+  
+  <!-- Math legend -->
+  <text x="14" y="192" font-size="5" fill="#7f8c8d" font-style="italic">∀: forall • →: function • ∋: contains • ×: product • ≡: immutable</text>
+</svg>
